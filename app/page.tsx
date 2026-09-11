@@ -375,12 +375,6 @@ export default function Home() {
                     className="transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1 motion-reduce:transform-none"
                   />
                 </Link>
-                <Link
-                  href="/pitch"
-                  className="secondary-command flex h-14 items-center justify-center rounded-sm border border-white/20 px-8 text-lg font-medium text-white/70 transition-all hover:border-white/40 hover:bg-white/[0.05]"
-                >
-                  Details
-                </Link>
               </div>
             </div>
           </ScrollReveal>
