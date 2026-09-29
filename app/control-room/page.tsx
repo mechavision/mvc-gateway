@@ -35,7 +35,16 @@ const deckLinks = [
   deckEntry("Core Deck (wedge-first, no logos)", "/pitch/no-logos"),
   deckEntry("Mission-first deck", "/pitch/mission"),
   deckEntry("Mission-first deck (no logos)", "/pitch/mission/no-logos"),
-];
+].flatMap((deck) => [
+  {
+    label: `${deck.label} — Jake only`,
+    href: `${deck.href}?team=solo`,
+  },
+  {
+    label: `${deck.label} — Jake + Rishav, Tom advising`,
+    href: `${deck.href}?team=cofounders`,
+  },
+]);
 
 const onePagerLinks = [
   {
