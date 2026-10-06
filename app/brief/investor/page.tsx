@@ -12,9 +12,9 @@ import {
 import BriefPage from "@/components/brief/BriefPage";
 
 export const metadata: Metadata = {
-  title: "Varnic Investor One-Pager",
+  title: "MVC Investor One-Pager",
   description:
-    "Varnic investor one-pager for AI work capture in maintenance and inspection.",
+    "MVC investor one-pager for AI work capture in maintenance and inspection.",
   robots: { index: false, follow: false },
 };
 
@@ -143,7 +143,7 @@ export default function InvestorBriefPage() {
               className="font-display uppercase text-cream-200"
               style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.28em" }}
             >
-              Varnic
+              The Mechanical Vision Corporation
             </div>
           </div>
 
@@ -160,7 +160,7 @@ export default function InvestorBriefPage() {
               className="mt-3 max-w-[6.7in] text-cream-300"
               style={{ fontSize: "15.5px", lineHeight: 1.45 }}
             >
-              Varnic uses smart glasses and AI to observe maintenance work as it happens,
+              MVC uses smart glasses and AI to observe maintenance work as it happens,
               turn that work into evidence-backed records, and keep human review and
               signoff in control.
             </p>
@@ -231,7 +231,7 @@ export default function InvestorBriefPage() {
             />
           </div>
           <p className="mt-3 text-cream-300" style={{ fontSize: "11.5px", lineHeight: 1.45 }}>
-            Varnic produces documentation from observed work, so the record is attached to
+            MVC produces documentation from observed work, so the record is attached to
             the actual evidence instead of reconstructed later.
           </p>
         </CornerPanel>
@@ -280,9 +280,9 @@ export default function InvestorBriefPage() {
         style={{ fontSize: "9.5px" }}
       >
         <div className="font-display uppercase tracking-[0.24em] text-cream-200">
-          Varnic
+          The Mechanical Vision Corporation
         </div>
-        <div className="text-cream-400">varnic.ai · jake@varnic.ai</div>
+        <div className="text-cream-400">mechanicalvisioncorp.com · jake@mechanicalvisioncorp.com</div>
       </footer>
     </BriefPage>
   );

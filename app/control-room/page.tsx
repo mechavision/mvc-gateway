@@ -3,19 +3,19 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Sales Control Room",
+  title: "Sales Control Room | The Mechanical Vision Corporation",
   description:
-    "Internal Varnic control room for choosing the right deck, one-pager, or field note before a sales or investor conversation.",
+    "Internal MVC control room for choosing the right deck, one-pager, or field note before a sales or investor conversation.",
   robots: { index: false, follow: false },
 };
 
 // Point deck links at the deck's own origin (not a relative /pitch path) so the
-// viewer's deck passcode cookie — which lives on varnic.ai — is
+// viewer's deck passcode cookie — which lives on mechanicalvisioncorp.com — is
 // reused. A relative link would hit the passcode gate again on this domain.
 const pitchOrigin =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3018"
-    : "https://varnic.ai";
+    : "https://mechanicalvisioncorp.com";
 
 const linkClassName =
   "text-[#0645ad] underline underline-offset-2 visited:text-[#0b0080]";
@@ -47,7 +47,7 @@ const onePagerLinks = [
     href: "/brief/investor",
   },
   {
-    label: "How Varnic works",
+    label: "How MVC works",
     href: "/brief/how-it-works",
   },
   {
@@ -171,7 +171,7 @@ const storyReminders = [
     id: "mvc-story",
     body: (
       <>
-        Varnic story: glasses observe, mechanic just does the job, human reviews and
+        MVC story: glasses observe, mechanic just does the job, human reviews and
         signs. We solve the urgent documentation problem while collecting the
         expert maintenance data robots will need.
       </>
@@ -185,7 +185,7 @@ export default function ControlRoomPage() {
       <div className="mx-auto max-w-[680px]">
         <h1 className="text-[28px] font-normal leading-tight">Jake sales control room</h1>
         <p className="mt-4">
-          Quick links for Varnic decks, one-pagers, and follow-up material.
+          Quick links for MVC decks, one-pagers, and follow-up material.
         </p>
 
         <Section title="Decks">
@@ -233,7 +233,7 @@ export default function ControlRoomPage() {
           <ul className="list-disc pl-6">
             <li>
               <ExternalLink href="https://mechanicalvisioncorp.com/aerovision/console">
-                Varnic Employee Console
+                MVC Employee Console
               </ExternalLink>
             </li>
           </ul>

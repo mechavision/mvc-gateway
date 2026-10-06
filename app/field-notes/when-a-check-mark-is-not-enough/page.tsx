@@ -7,11 +7,11 @@ import Navbar from "@/components/navbar";
 export const metadata: Metadata = {
   title: "When a Check Mark Is Not Enough | Field Notes",
   description:
-    "A founder-led Field Note from Varnic on why completed maintenance steps do not always preserve enough evidence to explain the decision later.",
+    "A founder-led Field Note from MVC on why completed maintenance steps do not always preserve enough evidence to explain the decision later.",
   openGraph: {
     title: "When a Check Mark Is Not Enough | Field Notes",
     description:
-      "A founder-led Field Note from Varnic on why completed maintenance steps do not always preserve enough evidence to explain the decision later.",
+      "A founder-led Field Note from MVC on why completed maintenance steps do not always preserve enough evidence to explain the decision later.",
   },
 };
 
@@ -48,7 +48,7 @@ export default function CheckMarkFieldNotePage() {
               technician saw, why a part passed, or why a part failed.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/45">
-              <span>Varnic</span>
+              <span>The Mechanical Vision Corporation</span>
               <span aria-hidden="true">/</span>
               <span>June 2026</span>
             </div>
@@ -210,7 +210,7 @@ export default function CheckMarkFieldNotePage() {
                   If you run maintenance operations and this mirrors what you see,
                   we&apos;d like to{" "}
                   <a
-                    href="mailto:jake@varnic.ai"
+                    href="mailto:jake@mechanicalvisioncorp.com"
                     className="font-medium text-white/80 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white"
                   >
                     compare notes
@@ -226,7 +226,7 @@ export default function CheckMarkFieldNotePage() {
                   Field Note 04
                 </div>
                 <p className="mt-5 text-sm leading-relaxed text-white/62">
-                  Part of Varnic&apos;s Field Notes series on evidence quality,
+                  Part of MVC&apos;s Field Notes series on evidence quality,
                   documentation, and MRO operational memory.
                 </p>
               </div>

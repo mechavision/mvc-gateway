@@ -5,9 +5,9 @@ import AnimatedGrid from "@/components/animated-grid";
 import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: "Field Notes",
+  title: "Field Notes | The Mechanical Vision Corporation",
   description:
-    "Field Notes from Varnic on aviation maintenance, MRO labor pressure, documentation, and work capture.",
+    "Field Notes from The Mechanical Vision Corporation on aviation maintenance, MRO labor pressure, documentation, and work capture.",
 };
 
 const publishedNotes = [

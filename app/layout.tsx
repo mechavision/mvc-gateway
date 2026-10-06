@@ -20,22 +20,22 @@ const spaceGrotesk = Space_Grotesk({
 const isVercelProduction = process.env.VERCEL_ENV === "production";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://varnic.ai"),
+  metadataBase: new URL("https://mechanicalvisioncorp.com"),
   title: {
-    default: "Varnic",
-    template: "%s | Varnic",
+    default: "The Mechanical Vision Corporation",
+    template: "%s | The Mechanical Vision Corporation",
   },
   description:
-    "Varnic builds work-capture systems for aviation maintenance teams.",
+    "The Mechanical Vision Corporation builds work-capture systems for aviation maintenance teams.",
   // Link-preview cards (Slack, iMessage, LinkedIn, X) — image comes from
   // app/opengraph-image.tsx, which Next picks up automatically.
   openGraph: {
-    siteName: "Varnic",
+    siteName: "The Mechanical Vision Corporation",
     type: "website",
-    url: "https://varnic.ai",
-    title: "Varnic",
+    url: "https://mechanicalvisioncorp.com",
+    title: "The Mechanical Vision Corporation",
     description:
-      "Varnic builds work-capture systems for aviation maintenance teams.",
+      "The Mechanical Vision Corporation builds work-capture systems for aviation maintenance teams.",
   },
   twitter: {
     card: "summary_large_image",

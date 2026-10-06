@@ -36,34 +36,6 @@ const nextConfig: NextConfig = {
         destination: "https://aerovision-seed-deck-no-logos.vercel.app/pitch/:path*",
         permanent: false,
       },
-      // Varnic rename: varnic.ai is the public site. The AeroVision product app
-      // stays on mechanicalvisioncorp.com/aerovision because its Auth.js URL,
-      // Google OAuth callback, S3 CORS origin, and device clients are pinned there.
-      {
-        source: "/aerovision",
-        has: [{ type: "host", value: "varnic.ai" }],
-        destination: "https://mechanicalvisioncorp.com/aerovision",
-        permanent: false,
-      },
-      {
-        source: "/aerovision/:path*",
-        has: [{ type: "host", value: "varnic.ai" }],
-        destination: "https://mechanicalvisioncorp.com/aerovision/:path*",
-        permanent: false,
-      },
-      // Everything else on mechanicalvisioncorp.com moves to the same path on varnic.ai.
-      {
-        source: "/:path((?!aerovision(?:/|$)).*)",
-        has: [{ type: "host", value: "mechanicalvisioncorp.com" }],
-        destination: "https://varnic.ai/:path",
-        permanent: true,
-      },
-      {
-        source: "/:path((?!aerovision(?:/|$)).*)",
-        has: [{ type: "host", value: "www.mechanicalvisioncorp.com" }],
-        destination: "https://varnic.ai/:path",
-        permanent: true,
-      },
       // Redirect mechavisioncorp.com → mechanicalvisioncorp.com
       {
         source: "/:path*",

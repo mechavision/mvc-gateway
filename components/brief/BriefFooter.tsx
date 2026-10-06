@@ -6,13 +6,13 @@ export default function BriefFooter() {
     >
       <div className="flex flex-col gap-0.5">
         <div className="font-display uppercase tracking-[0.28em] text-cream-200" style={{ fontSize: "10px" }}>
-          Varnic
+          The Mechanical Vision Corporation
         </div>
-        <div className="text-cream-400">varnic.ai</div>
+        <div className="text-cream-400">mechanicalvisioncorp.com</div>
       </div>
       <div className="flex flex-col items-end gap-0.5 text-cream-400">
-        <a href="mailto:jake@varnic.ai">
-          jake@varnic.ai
+        <a href="mailto:jake@mechanicalvisioncorp.com">
+          jake@mechanicalvisioncorp.com
         </a>
       </div>
     </footer>
