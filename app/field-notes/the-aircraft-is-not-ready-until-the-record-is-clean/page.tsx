@@ -7,11 +7,11 @@ import Navbar from "@/components/navbar";
 export const metadata: Metadata = {
   title: "The Aircraft Is Not Ready Until the Record Is Clean | Field Notes",
   description:
-    "A founder-led Field Note from MVC on why MRO labor pressure is becoming a capacity problem, not just a hiring problem.",
+    "A founder-led Field Note from Varnic on why MRO labor pressure is becoming a capacity problem, not just a hiring problem.",
   openGraph: {
     title: "The Aircraft Is Not Ready Until the Record Is Clean | Field Notes",
     description:
-      "A founder-led Field Note from MVC on why MRO labor pressure is becoming a capacity problem, not just a hiring problem.",
+      "A founder-led Field Note from Varnic on why MRO labor pressure is becoming a capacity problem, not just a hiring problem.",
   },
 };
 
@@ -90,7 +90,7 @@ export default function MroLaborFieldNotePage() {
               hours problem.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/45">
-              <span>The Mechanical Vision Corporation</span>
+              <span>Varnic</span>
               <span aria-hidden="true">/</span>
               <span>June 2026</span>
             </div>
@@ -332,7 +332,7 @@ export default function MroLaborFieldNotePage() {
                 </p>
 
                 <p>
-                  At MVC, this is the problem we keep coming back to. The next
+                  At Varnic, this is the problem we keep coming back to. The next
                   generation of MRO productivity will not come only from hiring more
                   people. It will come from giving scarce experts more useful hours
                   back.

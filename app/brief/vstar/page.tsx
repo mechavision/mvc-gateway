@@ -15,9 +15,9 @@ import BriefPage from "@/components/brief/BriefPage";
 import BriefSection from "@/components/brief/BriefSection";
 
 export const metadata: Metadata = {
-  title: "MVC for V-Star Powered Lift",
+  title: "Varnic for V-Star Powered Lift",
   description:
-    "A V-Star-specific MVC brief on observed maintenance work, evidence-backed records, and time saved for mechanics and inspectors.",
+    "A V-Star-specific Varnic brief on observed maintenance work, evidence-backed records, and time saved for mechanics and inspectors.",
   robots: { index: false, follow: false },
 };
 
@@ -71,7 +71,7 @@ export default function VStarBriefPage() {
       <BriefHero
         image="/mechavision-brief-airplane-bw.jpg"
         imageAlt="Aircraft at an airport gate"
-        headline={<>MVC for V-Star Powered Lift</>}
+        headline={<>Varnic for V-Star Powered Lift</>}
         subhead={
           <>
             The Mechanic works. The paperwork writes itself.
@@ -85,14 +85,14 @@ export default function VStarBriefPage() {
       />
 
       <BriefSection
-        eyebrow="What MVC does"
+        eyebrow="What Varnic does"
         title="Observe the work. Prepare the record."
         className="mt-[0.14in]"
       >
         <div className="grid grid-cols-[1fr_1.45fr] gap-6">
           <p style={{ fontSize: "12.4px", lineHeight: 1.45 }}>
             The mechanic or inspector does the job the way they already do it.
-            The CMM or approved manual stays canonical. MVC observes the work
+            The CMM or approved manual stays canonical. Varnic observes the work
             against that source, pulls out the evidence that matters, and
             prepares the record.
           </p>
@@ -185,7 +185,7 @@ export default function VStarBriefPage() {
           </h2>
           <div className="mt-3 flex w-[3.75in] flex-col gap-2 text-cream-300">
             <p style={{ fontSize: "12.4px", lineHeight: 1.45 }}>
-              MVC can attach the evidence trail to the maintenance record, so a
+              Varnic can attach the evidence trail to the maintenance record, so a
               reviewer can see what was done, where a number came from, and what
               still needs attention.
             </p>
