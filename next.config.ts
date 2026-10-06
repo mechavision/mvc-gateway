@@ -36,6 +36,21 @@ const nextConfig: NextConfig = {
         destination: "https://aerovision-seed-deck-no-logos.vercel.app/pitch/:path*",
         permanent: false,
       },
+      // varnic.ai mirrors the public site. The AeroVision product app lives on
+      // mechanicalvisioncorp.com/aerovision (Auth.js URL, OAuth callback, S3 CORS,
+      // device clients are pinned there), so send product paths back to it.
+      {
+        source: "/aerovision",
+        has: [{ type: "host", value: "varnic.ai" }],
+        destination: "https://mechanicalvisioncorp.com/aerovision",
+        permanent: false,
+      },
+      {
+        source: "/aerovision/:path*",
+        has: [{ type: "host", value: "varnic.ai" }],
+        destination: "https://mechanicalvisioncorp.com/aerovision/:path*",
+        permanent: false,
+      },
       // Redirect mechavisioncorp.com → mechanicalvisioncorp.com
       {
         source: "/:path*",
