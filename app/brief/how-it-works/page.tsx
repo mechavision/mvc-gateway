@@ -6,9 +6,9 @@ import BriefSection from "@/components/brief/BriefSection";
 import BriefFooter from "@/components/brief/BriefFooter";
 
 export const metadata: Metadata = {
-  title: "How MVC Works",
+  title: "How Varnic Works",
   description:
-    "MVC observes maintenance work, prepares evidence-backed records, and keeps human review and signoff in control.",
+    "Varnic observes maintenance work, prepares evidence-backed records, and keeps human review and signoff in control.",
   robots: { index: false, follow: false },
 };
 

@@ -5,7 +5,7 @@ import { getLegalDocument } from "@/lib/legal-documents";
 const document = getLegalDocument("privacy-policy");
 
 export const metadata: Metadata = {
-  title: `${document.title} | The Mechanical Vision Corporation`,
+  title: document.title,
   description: document.summary,
 };
 

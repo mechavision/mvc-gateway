@@ -386,7 +386,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl text-sm text-white/45">
           <div className="flex flex-col gap-4">
             <span className="text-white/55">
-              &copy; 2026 The Mechanical Vision Corporation
+              &copy; 2026 Varnic
             </span>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
               <span>Jake Salomon</span>
