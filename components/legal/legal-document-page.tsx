@@ -164,7 +164,7 @@ export default function LegalDocumentPage({
       <header className="border-b border-dark-950/10 bg-dark-950 px-6 py-6 text-white">
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-6">
           <Link href="/" className="font-display text-lg font-semibold tracking-tight">
-            MVC
+            Varnic
           </Link>
           <nav className="flex items-center gap-4 text-sm text-white/70">
             <Link href="/legal/terms" className="transition-colors hover:text-white">

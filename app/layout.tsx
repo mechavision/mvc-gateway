@@ -22,20 +22,20 @@ const isVercelProduction = process.env.VERCEL_ENV === "production";
 export const metadata: Metadata = {
   metadataBase: new URL("https://mechanicalvisioncorp.com"),
   title: {
-    default: "The Mechanical Vision Corporation",
-    template: "%s | The Mechanical Vision Corporation",
+    default: "Varnic",
+    template: "%s | Varnic",
   },
   description:
-    "The Mechanical Vision Corporation builds work-capture systems for aviation maintenance teams.",
+    "Varnic builds work-capture systems for aviation maintenance teams.",
   // Link-preview cards (Slack, iMessage, LinkedIn, X) — image comes from
   // app/opengraph-image.tsx, which Next picks up automatically.
   openGraph: {
-    siteName: "The Mechanical Vision Corporation",
+    siteName: "Varnic",
     type: "website",
     url: "https://mechanicalvisioncorp.com",
-    title: "The Mechanical Vision Corporation",
+    title: "Varnic",
     description:
-      "The Mechanical Vision Corporation builds work-capture systems for aviation maintenance teams.",
+      "Varnic builds work-capture systems for aviation maintenance teams.",
   },
   twitter: {
     card: "summary_large_image",

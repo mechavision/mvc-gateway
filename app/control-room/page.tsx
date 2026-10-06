@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Sales Control Room | The Mechanical Vision Corporation",
+  title: "Sales Control Room",
   description:
-    "Internal MVC control room for choosing the right deck, one-pager, or field note before a sales or investor conversation.",
+    "Internal Varnic control room for choosing the right deck, one-pager, or field note before a sales or investor conversation.",
   robots: { index: false, follow: false },
 };
 
@@ -47,7 +47,7 @@ const onePagerLinks = [
     href: "/brief/investor",
   },
   {
-    label: "How MVC works",
+    label: "How Varnic works",
     href: "/brief/how-it-works",
   },
   {
@@ -171,7 +171,7 @@ const storyReminders = [
     id: "mvc-story",
     body: (
       <>
-        MVC story: glasses observe, mechanic just does the job, human reviews and
+        Varnic story: glasses observe, mechanic just does the job, human reviews and
         signs. We solve the urgent documentation problem while collecting the
         expert maintenance data robots will need.
       </>
@@ -185,7 +185,7 @@ export default function ControlRoomPage() {
       <div className="mx-auto max-w-[680px]">
         <h1 className="text-[28px] font-normal leading-tight">Jake sales control room</h1>
         <p className="mt-4">
-          Quick links for MVC decks, one-pagers, and follow-up material.
+          Quick links for Varnic decks, one-pagers, and follow-up material.
         </p>
 
         <Section title="Decks">
@@ -233,7 +233,7 @@ export default function ControlRoomPage() {
           <ul className="list-disc pl-6">
             <li>
               <ExternalLink href="https://mechanicalvisioncorp.com/aerovision/console">
-                MVC Employee Console
+                Varnic Employee Console
               </ExternalLink>
             </li>
           </ul>

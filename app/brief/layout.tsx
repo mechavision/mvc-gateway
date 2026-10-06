@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./print.css";
 
 export const metadata: Metadata = {
-  title: "MVC · Design partner brief",
+  title: "Varnic · Design partner brief",
   description:
-    "MVC in one page. Aerospace maintenance, captured as it happens.",
+    "Varnic in one page. Aerospace maintenance, captured as it happens.",
   robots: { index: false, follow: false },
 };
 

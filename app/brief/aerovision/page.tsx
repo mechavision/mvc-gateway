@@ -6,16 +6,16 @@ import BriefPage from "@/components/brief/BriefPage";
 import BriefSection from "@/components/brief/BriefSection";
 
 export const metadata: Metadata = {
-  title: "MVC · Prospect one-pager",
+  title: "Varnic · Prospect one-pager",
   description:
-    "MVC helps aircraft maintenance teams reduce turnaround time by preparing review-ready records from observed work.",
+    "Varnic helps aircraft maintenance teams reduce turnaround time by preparing review-ready records from observed work.",
 };
 
 const workflowSteps = [
   {
     label: "Observe",
     detail:
-      "The mechanic starts the job normally. MVC's glasses observe the work without changing the flow.",
+      "The mechanic starts the job normally. Varnic's glasses observe the work without changing the flow.",
   },
   {
     label: "Prepare",
@@ -52,7 +52,7 @@ const proofPoints = [
   "Human review and signoff stay in control.",
 ];
 
-export default function MVCBriefPage() {
+export default function VarnicBriefPage() {
   return (
     <BriefPage>
       <BriefHero
@@ -112,7 +112,7 @@ export default function MVCBriefPage() {
       >
         <div className="grid grid-cols-[1.1fr_1.65fr] gap-6">
           <p className="text-cream-300" style={{ fontSize: "12.1px", lineHeight: 1.5 }}>
-            MVC starts with the real source of truth: the work itself. The glasses observe the task, the AI organizes the evidence, and the mechanic reviews the record before signoff.
+            Varnic starts with the real source of truth: the work itself. The glasses observe the task, the AI organizes the evidence, and the mechanic reviews the record before signoff.
           </p>
           <div className="border-y border-cream-200/10">
             {outcomes.map((outcome, index) => (
