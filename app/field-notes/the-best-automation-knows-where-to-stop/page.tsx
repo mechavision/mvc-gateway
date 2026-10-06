@@ -6,7 +6,7 @@ import Navbar from "@/components/navbar";
 
 const headerImage =
   "/images/field-notes/the-best-automation-knows-where-to-stop.webp";
-const headerImageUrl = `https://mechanicalvisioncorp.com${headerImage}`;
+const headerImageUrl = `https://varnic.ai${headerImage}`;
 
 export const metadata: Metadata = {
   title: "The Best Automation Knows Where to Stop | Field Notes",
