@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-// Default link-preview card for varnic.ai.
+// Default link-preview card for mechanicalvisioncorp.com.
 // Rendered statically at build time with system fonts only — no remote
 // fetches, so it stays edge-safe and reliable.
 export const alt = "Varnic";
@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
 
         {/* Domain — small, muted */}
         <div style={{ fontSize: 28, color: "#8A8A8A" }}>
-          varnic.ai
+          mechanicalvisioncorp.com
         </div>
       </div>
     ),

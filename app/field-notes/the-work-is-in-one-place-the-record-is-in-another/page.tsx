@@ -172,7 +172,7 @@ export default function WorkAndRecordFieldNotePage() {
                   If you run maintenance operations and this mirrors what you see,
                   we&apos;d like to{" "}
                   <a
-                    href="mailto:jake@varnic.ai"
+                    href="mailto:jake@mechanicalvisioncorp.com"
                     className="font-medium text-white/80 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white"
                   >
                     compare notes

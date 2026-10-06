@@ -282,7 +282,7 @@ export default function InvestorBriefPage() {
         <div className="font-display uppercase tracking-[0.24em] text-cream-200">
           Varnic
         </div>
-        <div className="text-cream-400">varnic.ai · jake@varnic.ai</div>
+        <div className="text-cream-400">mechanicalvisioncorp.com · jake@mechanicalvisioncorp.com</div>
       </footer>
     </BriefPage>
   );
