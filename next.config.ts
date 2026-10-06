@@ -24,6 +24,19 @@ const nextConfig: NextConfig = {
         destination: "/control-room",
         permanent: false,
       },
+      // The Varnic deck variant was removed for Demo Day; keep previously shared
+      // /pitch/varnic links (often with ?team=...) working by sending them to the
+      // main MVC deck. Query strings are preserved automatically.
+      {
+        source: "/pitch/varnic",
+        destination: "/pitch",
+        permanent: false,
+      },
+      {
+        source: "/pitch/varnic/:path*",
+        destination: "/pitch",
+        permanent: false,
+      },
       // MVC vanity path for the no-logos investor deck variant.
       // This redirects instead of rewrites because that deck is built with /pitch as its basePath.
       {
