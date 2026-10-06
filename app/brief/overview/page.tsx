@@ -15,9 +15,9 @@ import BriefSection from "@/components/brief/BriefSection";
 import BriefFooter from "@/components/brief/BriefFooter";
 
 export const metadata: Metadata = {
-  title: "Varnic",
+  title: "The Mechanical Vision Corporation",
   description:
-    "A customer-facing Varnic brief on observed maintenance work, evidence-backed records, and time saved for mechanics and inspectors.",
+    "A customer-facing MVC brief on observed maintenance work, evidence-backed records, and time saved for mechanics and inspectors.",
   robots: { index: false, follow: false },
 };
 
@@ -74,7 +74,7 @@ export default function BriefOverviewPage() {
       <BriefHero
         image="/mechavision-brief-airplane-bw.jpg"
         imageAlt="Aircraft at an airport gate"
-        headline={<>Varnic</>}
+        headline={<>The Mechanical Vision Corporation</>}
         subhead={
           <>
             The Mechanic works. The paperwork writes itself.
@@ -88,7 +88,7 @@ export default function BriefOverviewPage() {
       />
 
       <BriefSection
-        eyebrow="What Varnic does"
+        eyebrow="What MVC does"
         title="Observe the work. Prepare the record."
         className="mt-[0.14in]"
       >
@@ -101,7 +101,7 @@ export default function BriefOverviewPage() {
             </p>
             <p style={{ fontSize: "11.8px", lineHeight: 1.38 }}>
               The mechanic or inspector works normally. The CMM or approved
-              manual stays canonical. Varnic observes the work against that source
+              manual stays canonical. MVC observes the work against that source
               and prepares the record for review.
             </p>
           </div>
@@ -198,7 +198,7 @@ export default function BriefOverviewPage() {
           </h2>
           <div className="mt-3 flex w-[3.75in] flex-col gap-2 text-cream-300">
             <p style={{ fontSize: "12.4px", lineHeight: 1.45 }}>
-              Varnic can attach the evidence trail to the maintenance record, so a
+              MVC can attach the evidence trail to the maintenance record, so a
               reviewer can see what was done, where a number came from, and what
               still needs attention.
             </p>

@@ -6,7 +6,7 @@ export default function BriefFooter() {
     >
       <div className="flex flex-col gap-0.5">
         <div className="font-display uppercase tracking-[0.28em] text-cream-200" style={{ fontSize: "10px" }}>
-          Varnic
+          The Mechanical Vision Corporation
         </div>
         <div className="text-cream-400">mechanicalvisioncorp.com</div>
       </div>

@@ -11,7 +11,7 @@ const headerImageUrl = `https://mechanicalvisioncorp.com${headerImage}`;
 export const metadata: Metadata = {
   title: "The Best Automation Knows Where to Stop | Field Notes",
   description:
-    "A Field Note from Varnic on why technology should remove the burden around skilled work—not the skilled person at its center.",
+    "A Field Note from MVC on why technology should remove the burden around skilled work—not the skilled person at its center.",
   openGraph: {
     title: "The Best Automation Knows Where to Stop",
     description:
@@ -67,7 +67,7 @@ export default function BestAutomationFieldNotePage() {
                 the skilled person at its center.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/55">
-                <span>Varnic</span>
+                <span>The Mechanical Vision Corporation</span>
                 <span aria-hidden="true">/</span>
                 <span>July 2026</span>
               </div>
@@ -302,7 +302,7 @@ export default function BestAutomationFieldNotePage() {
                 </h2>
 
                 <p>
-                  At Varnic, we believe the next
+                  At The Mechanical Vision Corporation, we believe the next
                   generation of industrial technology should be built around the
                   people who keep the physical world running.
                 </p>
@@ -351,7 +351,7 @@ export default function BestAutomationFieldNotePage() {
                   Field Note 06
                 </div>
                 <p className="mt-5 text-sm leading-relaxed text-white/62">
-                  Part of Varnic&apos;s Field Notes series on skilled work, human
+                  Part of MVC&apos;s Field Notes series on skilled work, human
                   judgment, and the proper role of automation.
                 </p>
                 <div className="mt-6 border-t border-white/10 pt-5">

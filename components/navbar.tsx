@@ -55,7 +55,7 @@ export default function Navbar() {
           href="/"
           className="text-lg font-bold tracking-tight text-white transition-colors duration-300"
         >
-          Varnic
+          MVC
         </Link>
 
         {/* Desktop section links */}
