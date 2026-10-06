@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 };
 
 // Point deck links at the deck's own origin (not a relative /pitch path) so the
-// viewer's deck passcode cookie — which lives on mechanicalvisioncorp.com — is
+// viewer's deck passcode cookie — which lives on varnic.ai — is
 // reused. A relative link would hit the passcode gate again on this domain.
 const pitchOrigin =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3018"
-    : "https://mechanicalvisioncorp.com";
+    : "https://varnic.ai";
 
 const linkClassName =
   "text-[#0645ad] underline underline-offset-2 visited:text-[#0b0080]";
