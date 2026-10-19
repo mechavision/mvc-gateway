@@ -58,7 +58,7 @@ export default function Home() {
               />
             </Link>
             <a
-              href="https://calendar.app.google/ajT5d6E4c9cmU92R7"
+              href="https://calendly.com/jrsalomon/intro"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-base font-medium"

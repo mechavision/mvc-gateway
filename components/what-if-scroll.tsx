@@ -137,7 +137,7 @@ export default function WhatIfScroll() {
               That&rsquo;s what we&rsquo;re building.
             </p>
             <a
-              href="https://calendar.app.google/ajT5d6E4c9cmU92R7"
+              href="https://calendly.com/jrsalomon/intro"
               target="_blank"
               rel="noopener noreferrer"
               className="whatif-link flex items-center gap-2 text-base lg:text-lg text-white/70 hover:text-white transition-colors"
@@ -235,7 +235,7 @@ export default function WhatIfScroll() {
                     {slide.text}
                   </p>
                   <a
-                    href="https://calendar.app.google/ajT5d6E4c9cmU92R7"
+                    href="https://calendly.com/jrsalomon/intro"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="whatif-link flex items-center gap-2 text-base lg:text-lg text-white/70 hover:text-white transition-colors"
