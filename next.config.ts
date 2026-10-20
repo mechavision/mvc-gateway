@@ -37,6 +37,19 @@ const nextConfig: NextConfig = {
         destination: "/pitch",
         permanent: false,
       },
+      // Short shareable link for the robotics deck (Jake, 2026-10-20). Redirects
+      // instead of rewrites because the deck is built with /pitch as its
+      // basePath. Temporary so the target can move as the deck iterates.
+      {
+        source: "/robots",
+        destination: "/pitch/robots",
+        permanent: false,
+      },
+      {
+        source: "/robots/:path*",
+        destination: "/pitch/robots",
+        permanent: false,
+      },
       // MVC vanity path for the no-logos investor deck variant.
       // This redirects instead of rewrites because that deck is built with /pitch as its basePath.
       {

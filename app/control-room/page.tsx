@@ -35,7 +35,16 @@ const deckLinks = [
   deckEntry("Core Deck (wedge-first, no logos)", "/pitch/no-logos"),
   deckEntry("Mission-first deck", "/pitch/mission"),
   deckEntry("Mission-first deck (no logos)", "/pitch/mission/no-logos"),
-  deckEntry("Robotics deck", "/pitch/robots"),
+  // Uses the short share link (next.config.ts redirects /robots to
+  // /pitch/robots). Local dev has no gateway redirect, so it goes straight to
+  // the deck route there.
+  {
+    label: "Robotics deck (machinist.co/robots)",
+    href:
+      process.env.NODE_ENV === "development"
+        ? `${pitchOrigin}/pitch/robots`
+        : "https://machinist.co/robots",
+  },
 ];
 
 const onePagerLinks = [
