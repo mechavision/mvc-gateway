@@ -35,6 +35,7 @@ const deckLinks = [
   deckEntry("Core Deck (wedge-first, no logos)", "/pitch/no-logos"),
   deckEntry("Mission-first deck", "/pitch/mission"),
   deckEntry("Mission-first deck (no logos)", "/pitch/mission/no-logos"),
+  deckEntry("Robotics deck", "/pitch/robots"),
 ];
 
 const onePagerLinks = [
@@ -72,7 +73,6 @@ const securityLinks = [
 ];
 
 const nextLinks = [
-  "Robotics/data deck, draft next",
   "Robotics story one-pager, optional after deck is locked",
 ];
 
