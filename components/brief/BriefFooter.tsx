@@ -8,7 +8,7 @@ export default function BriefFooter() {
         <div className="font-display uppercase tracking-[0.28em] text-cream-200" style={{ fontSize: "10px" }}>
           Machinist
         </div>
-        <div className="text-cream-400">mechanicalvisioncorp.com</div>
+        <div className="text-cream-400">machinist.co</div>
       </div>
       <div className="flex flex-col items-end gap-0.5 text-cream-400">
         <a href="mailto:jake@machinist.co">

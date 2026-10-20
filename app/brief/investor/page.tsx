@@ -282,7 +282,7 @@ export default function InvestorBriefPage() {
         <div className="font-display uppercase tracking-[0.24em] text-cream-200">
           Machinist
         </div>
-        <div className="text-cream-400">mechanicalvisioncorp.com · jake@machinist.co</div>
+        <div className="text-cream-400">machinist.co · jake@machinist.co</div>
       </footer>
     </BriefPage>
   );
