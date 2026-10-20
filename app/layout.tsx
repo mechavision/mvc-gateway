@@ -20,7 +20,7 @@ const spaceGrotesk = Space_Grotesk({
 const isVercelProduction = process.env.VERCEL_ENV === "production";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mechanicalvisioncorp.com"),
+  metadataBase: new URL("https://machinist.co"),
   title: {
     default: "Machinist",
     template: "%s | Machinist",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "Machinist",
     type: "website",
-    url: "https://mechanicalvisioncorp.com",
+    url: "https://machinist.co",
     title: "Machinist",
     description:
       "Machinist builds work-capture systems for aviation maintenance teams.",

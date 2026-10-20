@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // Keep the standalone control-room deployment focused on the internal page
-      // without changing the public MVC homepage on mechanicalvisioncorp.com.
+      // without changing the public homepage on machinist.co.
       {
         source: "/",
         has: [{ type: "host", value: "jake-control-room.vercel.app" }],
@@ -49,45 +49,63 @@ const nextConfig: NextConfig = {
         destination: "https://aerovision-seed-deck-no-logos.vercel.app/pitch/:path*",
         permanent: false,
       },
-      // varnic.ai mirrors the public site. The AeroVision product app lives on
-      // mechanicalvisioncorp.com/aerovision (Auth.js URL, OAuth callback, S3 CORS,
-      // device clients are pinned there), so send product paths back to it.
-      {
-        source: "/aerovision",
-        has: [{ type: "host", value: "varnic.ai" }],
-        destination: "https://mechanicalvisioncorp.com/aerovision",
+      // machinist.co is the public site. The AeroVision product app stays on
+      // mechanicalvisioncorp.com/aerovision because its Auth.js URL, Google OAuth
+      // callback, S3 CORS origin, and device clients are pinned there. Product
+      // paths on the other hosts go back to it, and everything else on
+      // mechanicalvisioncorp.com and varnic.ai moves to the same path on
+      // machinist.co. Temporary (307) for now so the switch stays reversible.
+      ...["machinist.co", "www.machinist.co", "varnic.ai", "www.varnic.ai"].flatMap(
+        (host) => [
+          {
+            source: "/aerovision",
+            has: [{ type: "host" as const, value: host }],
+            destination: "https://mechanicalvisioncorp.com/aerovision",
+            permanent: false,
+          },
+          {
+            source: "/aerovision/:path*",
+            has: [{ type: "host" as const, value: host }],
+            destination: "https://mechanicalvisioncorp.com/aerovision/:path*",
+            permanent: false,
+          },
+        ],
+      ),
+      ...[
+        "mechanicalvisioncorp.com",
+        "www.mechanicalvisioncorp.com",
+        "varnic.ai",
+        "www.varnic.ai",
+      ].map((host) => ({
+        source: "/:path((?!aerovision(?:/|$)).*)",
+        has: [{ type: "host" as const, value: host }],
+        destination: "https://machinist.co/:path",
         permanent: false,
-      },
-      {
-        source: "/aerovision/:path*",
-        has: [{ type: "host", value: "varnic.ai" }],
-        destination: "https://mechanicalvisioncorp.com/aerovision/:path*",
-        permanent: false,
-      },
-      // Redirect mechavisioncorp.com → mechanicalvisioncorp.com
+      })),
+      // Redirect mechavisioncorp.com → machinist.co
       {
         source: "/:path*",
         has: [{ type: "host", value: "mechavisioncorp.com" }],
-        destination: "https://mechanicalvisioncorp.com/:path*",
+        destination: "https://machinist.co/:path*",
         permanent: true,
       },
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.mechavisioncorp.com" }],
-        destination: "https://mechanicalvisioncorp.com/:path*",
+        destination: "https://machinist.co/:path*",
         permanent: true,
       },
-      // Redirect mechanicalvision.ai → mechanicalvisioncorp.com
+      // Redirect mechanicalvision.ai → machinist.co
       {
         source: "/:path*",
         has: [{ type: "host", value: "mechanicalvision.ai" }],
-        destination: "https://mechanicalvisioncorp.com/:path*",
+        destination: "https://machinist.co/:path*",
         permanent: true,
       },
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.mechanicalvision.ai" }],
-        destination: "https://mechanicalvisioncorp.com/:path*",
+        destination: "https://machinist.co/:path*",
         permanent: true,
       },
     ];

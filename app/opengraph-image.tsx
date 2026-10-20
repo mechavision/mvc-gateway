@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-// Default link-preview card for mechanicalvisioncorp.com.
+// Default link-preview card for machinist.co.
 // Rendered statically at build time with system fonts only — no remote
 // fetches, so it stays edge-safe and reliable.
 export const alt = "Machinist";
@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
 
         {/* Domain — small, muted */}
         <div style={{ fontSize: 28, color: "#8A8A8A" }}>
-          mechanicalvisioncorp.com
+          machinist.co
         </div>
       </div>
     ),
