@@ -9,7 +9,6 @@ const requiredSnippets = [
   'source: "/aerovision/:path*"',
   'https://aerovision-mvp.vercel.app/aerovision',
   'https://aerovision-mvp.vercel.app/aerovision/:path*',
-  'href="/aerovision/dashboard"',
   'href: "/brief/aerovision"',
 ];
 

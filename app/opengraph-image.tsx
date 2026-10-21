@@ -45,7 +45,7 @@ export default function OpenGraphImage() {
             color: "#E6E3E0",
           }}
         >
-          Free the Hands That Build.
+          Coming Soon
         </div>
 
         {/* Domain — small, muted */}

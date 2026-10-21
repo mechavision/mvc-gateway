@@ -16,6 +16,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Archived pages are kept for reference only and are not built.
+    "archive/**",
   ]),
 ]);
 
