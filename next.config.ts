@@ -37,6 +37,18 @@ const nextConfig: NextConfig = {
         destination: "/pitch",
         permanent: false,
       },
+      // Field Notes are archived while the site is a Coming Soon page
+      // (Jake, 2026-10-21). Send old links home. Temporary so they can come back.
+      {
+        source: "/field-notes",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/field-notes/:path*",
+        destination: "/",
+        permanent: false,
+      },
       // Short shareable link for the robotics deck (Jake, 2026-10-20). Redirects
       // instead of rewrites because the deck is built with /pitch as its
       // basePath. Temporary so the target can move as the deck iterates.
