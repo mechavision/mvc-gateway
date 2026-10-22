@@ -34,4 +34,6 @@ jobs:
 
       - run: npm run check:rewrite-ordering
 
+      - run: npm test
+
       - run: npm run build

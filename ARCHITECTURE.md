@@ -48,6 +48,7 @@ The gateway is the piece that makes those boundaries invisible to the visitor.
 
 It owns:
 
+- staff sign-in for internal pages (see Staff Sign-In)
 - host redirects from `mechavisioncorp.com` and `mechanicalvision.ai` to `mechanicalvisioncorp.com`
 - `beforeFiles` rewrites for `/aerovision` and `/pitch`
 
@@ -151,6 +152,37 @@ binary export can silently outlive changes to the deck's claims, ask, or slide
 order. A recipient PDF must be freshly rendered from the selected live route
 immediately before it is sent. `npm run check:deck-source-of-truth` blocks
 cached deck PDFs and stale control-room download links from being reintroduced.
+
+## Staff Sign-In
+
+Some pages are for Machinist staff only: the control room, its architecture
+page, and every deck under `/pitch` (Jake, 2026-10-22). Staff sign in with
+their Machinist Google Workspace account.
+
+```text
+Visitor opens machinist.co/pitch/robots
+  -> middleware.ts: signed mvc-staff-session cookie?
+     yes -> continue (the /pitch rewrite forwards the cookie to the deck,
+            which checks it again because its vercel.app address is public)
+     no  -> /auth/google/start -> Google (ID-token flow)
+            -> POST /auth/google/callback
+            -> check Google's signature, audience, nonce, and hd claim
+            -> set the 7-day cookie -> back to /pitch/robots
+```
+
+- There is no Google client secret. Trust comes from Google's RSA signature.
+- `hd` (the Workspace's primary domain) decides who is staff, not the email
+  text. A personal Gmail account has no `hd`.
+- Sign-in only runs on machinist.co. Other hosts (including
+  dev.mechanicalvisioncorp.com) are sent to the same path there first, because
+  the cookie belongs to one host and Google only returns people to registered
+  addresses.
+- Roll-out order matters: set the same `STAFF_SESSION_SECRET` on both Vercel
+  projects first, then ship the gateway, then the deck. A secret mismatch makes
+  the deck send people back to sign-in over and over.
+- Vercel settings: `STAFF_GOOGLE_CLIENT_ID` (a Web client whose authorized
+  redirect URIs include `https://machinist.co/auth/google/callback`) and
+  `STAFF_SESSION_SECRET` (same value on the aerovision-seed-deck project).
 
 ## Change Guardrails
 

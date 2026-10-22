@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-// Point deck links at the deck's own origin (not a relative /pitch path) so the
-// viewer's deck passcode cookie — which lives on machinist.co — is
-// reused. A relative link would hit the passcode gate again on this domain.
+// Point deck links at machinist.co, where staff sign in with Google. The staff
+// session cookie lives on machinist.co, so a deck opened there is already
+// signed in. Local dev goes straight to the deck dev server instead.
 const pitchOrigin =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3018"

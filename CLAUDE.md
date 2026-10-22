@@ -10,6 +10,7 @@ Landing page and routing gateway for `mechanicalvisioncorp.com`. Owns the Vercel
 - **Never push directly to `main`.** It auto-deploys to production via Vercel. Use PRs.
 - **Run `/Users/jake/bin/mvc-doctor.sh`** before any build, deploy, or merge work.
 - **Never store or serve investor-deck PDFs from this repo.** Cached deck binaries can silently drift from the Seed Deck app. The canonical `/pitch` routes are the only source of truth, and every recipient PDF must be freshly exported from the selected live route. `npm run check:deck-source-of-truth` enforces this rule.
+- **Staff-only pages need Google sign-in.** `/control-room`, `/control-room-architecture.html`, and every deck under `/pitch` are gated by `middleware.ts` to the Machinist Google Workspace (@mechanicalvisioncorp.com). The seed deck checks the same cookie, so `lib/staff-session.ts` must stay identical in both repos (shared test vector in `tests/staff-session.test.mjs`). Add any new internal page to the middleware matcher. Local: `npm run dev:open` skips the gate.
 - **Marketing copy follows the product language:** glasses observe, mechanic just does the job — never "narrates". Writing style rules apply (no em dashes, no semicolons, no buzzwords — see `~/AGENTS.md` → Writing Style Rules).
 - **iCloud guardrail:** canonical root is `/Users/jake/dev/Primary_OIR/MVC/mvc-gateway`. If the path resolves under `~/Desktop` or `~/Documents`, run `/Users/jake/bin/repo-preflight-icloud.sh <repo-path>` first.
 
@@ -19,8 +20,9 @@ Landing page and routing gateway for `mechanicalvisioncorp.com`. Owns the Vercel
 npm run dev               # Dev server
 npm run lint              # Fast gate
 npm run build             # Production build
-npm run validate:fast     # = lint
-npm run validate:release  # = lint && build
+npm run test              # Staff sign-in tests (node --test)
+npm run validate:fast     # = checks + tests + lint
+npm run validate:release  # = validate:fast + build
 ```
 
 ## Related Projects

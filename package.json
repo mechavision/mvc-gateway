@@ -7,14 +7,16 @@
   },
   "scripts": {
     "dev": "next dev",
+    "dev:open": "STAFF_GATE_DEV_OPEN=1 next dev",
     "build": "npm run check:deck-source-of-truth && next build",
     "start": "next start",
     "lint": "eslint",
     "check:rebrand-preservation": "node scripts/check-rebrand-preservation.mjs",
     "check:deck-source-of-truth": "node scripts/check-deck-source-of-truth.mjs",
     "check:rewrite-ordering": "node scripts/check-rewrite-ordering.mjs",
-    "validate:fast": "npm run check:rebrand-preservation && npm run check:deck-source-of-truth && npm run check:rewrite-ordering && npm run lint",
-    "validate:release": "npm run check:rebrand-preservation && npm run check:deck-source-of-truth && npm run check:rewrite-ordering && npm run lint && npm run build"
+    "validate:fast": "npm run check:rebrand-preservation && npm run check:deck-source-of-truth && npm run check:rewrite-ordering && npm test && npm run lint",
+    "validate:release": "npm run check:rebrand-preservation && npm run check:deck-source-of-truth && npm run check:rewrite-ordering && npm test && npm run lint && npm run build",
+    "test": "node --test --disable-warning=MODULE_TYPELESS_PACKAGE_JSON tests/*.test.mjs"
   },
   "dependencies": {
     "@sentry/nextjs": "^10.50.0",

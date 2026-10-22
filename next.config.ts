@@ -62,16 +62,17 @@ const nextConfig: NextConfig = {
         destination: "/pitch/robots",
         permanent: false,
       },
-      // MVC vanity path for the no-logos investor deck variant.
-      // This redirects instead of rewrites because that deck is built with /pitch as its basePath.
+      // Old vanity path for the no-logos deck. Its separate Vercel project is
+      // gone (404 on 2026-10-22), so send it to the same deck on the main deck
+      // app, which is behind staff sign-in.
       {
         source: "/pitch-no-logos",
-        destination: "https://aerovision-seed-deck-no-logos.vercel.app/pitch",
+        destination: "/pitch/no-logos",
         permanent: false,
       },
       {
         source: "/pitch-no-logos/:path*",
-        destination: "https://aerovision-seed-deck-no-logos.vercel.app/pitch/:path*",
+        destination: "/pitch/no-logos",
         permanent: false,
       },
       // machinist.co is the public site. The AeroVision product app stays on
