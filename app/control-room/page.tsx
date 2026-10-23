@@ -50,7 +50,7 @@ const deckLinks = [
 
 const onePagerLinks = [
   {
-    label: "MechaVision prospect one-pager",
+    label: "Machinist prospect one-pager",
     href: "/brief/aerovision",
   },
   {
@@ -73,7 +73,7 @@ const onePagerLinks = [
 
 const securityLinks = [
   {
-    label: "MechaVision Pilot IT and Security Packet",
+    label: "Machinist Pilot IT and Security Packet",
     href: "https://app.notion.com/p/389e3aa3f83d81a08b16c20f8ee7334b",
   },
   {
@@ -256,7 +256,7 @@ export default function ControlRoomPage() {
                 href="/control-room-architecture.html"
                 className={linkClassName}
               >
-                MechaVision system architecture (end-to-end)
+                Machinist system architecture (end-to-end)
               </a>
             </li>
           </ul>
