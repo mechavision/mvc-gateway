@@ -62,6 +62,14 @@ const nextConfig: NextConfig = {
         destination: "/pitch/robots",
         permanent: false,
       },
+      // Short shareable link to book a call with the founders (Jake, 2026-10-27).
+      // Public on purpose. Temporary so the booking page can change.
+      {
+        source: "/founders",
+        destination:
+          "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2KpYggMcCNLa84TJNyA6FOewd8B5lnYcb3BFa-C2XqBEcWT_ZquDMpoSZGJjuS0g5wop7PNLot",
+        permanent: false,
+      },
       // Old vanity path for the no-logos deck. Its separate Vercel project is
       // gone (404 on 2026-10-22), so send it to the same deck on the main deck
       // app, which is behind staff sign-in.
