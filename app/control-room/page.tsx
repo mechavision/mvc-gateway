@@ -32,6 +32,7 @@ function deckEntry(label: string, path: string) {
 
 const deckLinks = [
   deckEntry("Complete deck (newest core deck, Machinist title)", "/pitch/complete"),
+  deckEntry("Customer deck (complete deck, no robotics or fundraise)", "/pitch/complete/customer"),
   deckEntry("Core Deck (wedge-first)", "/pitch"),
   deckEntry("Core Deck (wedge-first, no logos)", "/pitch/no-logos"),
   deckEntry("Mission-first deck", "/pitch/mission"),
