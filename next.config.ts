@@ -62,6 +62,14 @@ const nextConfig: NextConfig = {
         destination: "/pitch/robots",
         permanent: false,
       },
+      // Short shareable link for the Foundation Model deck (Jake, 2026-11-03).
+      // Staff-only like the other decks: the /pitch matcher in middleware.ts
+      // gates the target.
+      {
+        source: "/foundation",
+        destination: "/pitch/foundation",
+        permanent: false,
+      },
       // Short shareable link to book a call with the founders (Jake, 2026-10-27).
       // Public on purpose. Temporary so the booking page can change.
       {
