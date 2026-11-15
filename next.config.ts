@@ -70,6 +70,13 @@ const nextConfig: NextConfig = {
         destination: "/pitch/foundation",
         permanent: false,
       },
+      // Short shareable link for the Inspection deck (Jake, 2026-11-15).
+      // Staff-only: the /pitch matcher in middleware.ts gates the target.
+      {
+        source: "/inspection",
+        destination: "/pitch/inspection",
+        permanent: false,
+      },
       // Short shareable link to book a call with the founders (Jake, 2026-10-27).
       // Public on purpose. Temporary so the booking page can change.
       {
