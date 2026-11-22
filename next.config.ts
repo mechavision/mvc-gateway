@@ -140,6 +140,23 @@ const nextConfig: NextConfig = {
           },
         ],
       ),
+      // machinist.co/app is the easy front door to the live product app. The
+      // app itself stays on mechanicalvisioncorp.com/aerovision (see above).
+      // Pairs with dev.machinist.co/app for hosted dev.
+      ...["machinist.co", "www.machinist.co"].flatMap((host) => [
+        {
+          source: "/app",
+          has: [{ type: "host" as const, value: host.replaceAll(".", "\\.") }],
+          destination: "https://mechanicalvisioncorp.com/aerovision",
+          permanent: false,
+        },
+        {
+          source: "/app/:path*",
+          has: [{ type: "host" as const, value: host.replaceAll(".", "\\.") }],
+          destination: "https://mechanicalvisioncorp.com/aerovision/:path*",
+          permanent: false,
+        },
+      ]),
       ...[
         "mechanicalvisioncorp.com",
         "www.mechanicalvisioncorp.com",

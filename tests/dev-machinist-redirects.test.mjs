@@ -43,6 +43,18 @@ test("a catch-all sends every other path to hosted dev, never Production", () =>
   }
 });
 
+test("machinist.co/app opens the live app on mechanicalvisioncorp.com", () => {
+  for (const host of ["machinist.co", "www.machinist.co"]) {
+    const rules = redirects.filter((rule) => matchesHost(rule, host));
+    const app = rules.find((rule) => rule.source === "/app");
+    const deep = rules.find((rule) => rule.source === "/app/:path*");
+    assert.equal(app?.destination, "https://mechanicalvisioncorp.com/aerovision", host);
+    assert.equal(deep?.destination, "https://mechanicalvisioncorp.com/aerovision/:path*", host);
+    assert.equal(app.permanent, false);
+    assert.ok(!matchesHost(app, "dev.machinist.co"), "live /app rule must not claim dev");
+  }
+});
+
 test("the host rule matches only dev.machinist.co", () => {
   const [rule] = devShortRules;
   assert.ok(matchesHost(rule, "dev.machinist.co"));
