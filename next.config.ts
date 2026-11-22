@@ -1,6 +1,24 @@
 import type { NextConfig } from "next";
 import { withSentryConfig } from "@sentry/nextjs";
 
+// dev.machinist.co is a short address for hosted dev. "/" and "/app" open the
+// dev product app, and every other path forwards to the same path on hosted
+// dev. The catch-all keeps this host away from the unscoped Production
+// rewrites further down: redirects run before rewrites, so nothing on
+// dev.machinist.co is ever proxied to Production.
+const DEV_SHORT_HOST = "dev.machinist.co";
+const HOSTED_DEV_ORIGIN = "https://dev.mechanicalvisioncorp.com";
+const devShortHostRedirects = [
+  { source: "/", destination: `${HOSTED_DEV_ORIGIN}/aerovision` },
+  { source: "/app", destination: `${HOSTED_DEV_ORIGIN}/aerovision` },
+  { source: "/app/:path*", destination: `${HOSTED_DEV_ORIGIN}/aerovision/:path*` },
+  { source: "/:path*", destination: `${HOSTED_DEV_ORIGIN}/:path*` },
+].map((rule) => ({
+  ...rule,
+  has: [{ type: "host" as const, value: DEV_SHORT_HOST.replaceAll(".", "\\.") }],
+  permanent: false,
+}));
+
 const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_SENTRY_DSN: process.env.NEXT_PUBLIC_SENTRY_DSN ?? process.env.SENTRY_DSN ?? "",
@@ -10,6 +28,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Must stay first so no other rule can claim a dev.machinist.co path.
+      ...devShortHostRedirects,
       // Keep the standalone control-room deployment focused on the internal page
       // without changing the public homepage on machinist.co.
       {
@@ -120,6 +140,23 @@ const nextConfig: NextConfig = {
           },
         ],
       ),
+      // machinist.co/app is the easy front door to the live product app. The
+      // app itself stays on mechanicalvisioncorp.com/aerovision (see above).
+      // Pairs with dev.machinist.co/app for hosted dev.
+      ...["machinist.co", "www.machinist.co"].flatMap((host) => [
+        {
+          source: "/app",
+          has: [{ type: "host" as const, value: host.replaceAll(".", "\\.") }],
+          destination: "https://mechanicalvisioncorp.com/aerovision",
+          permanent: false,
+        },
+        {
+          source: "/app/:path*",
+          has: [{ type: "host" as const, value: host.replaceAll(".", "\\.") }],
+          destination: "https://mechanicalvisioncorp.com/aerovision/:path*",
+          permanent: false,
+        },
+      ]),
       ...[
         "mechanicalvisioncorp.com",
         "www.mechanicalvisioncorp.com",
